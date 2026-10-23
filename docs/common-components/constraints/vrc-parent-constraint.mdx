@@ -1,0 +1,35 @@
+---
+sidebar_position: 3
+---
+import ConstraintMainSettings from './_partial-constraint-mainsettings.mdx'
+import ConstraintActivation from './_partial-constraint-activation.mdx'
+import ConstraintSubSettings from './_partial-constraint-subsettings.mdx'
+import ConstraintSources from './_partial-constraint-sources.mdx'
+import ConstraintAdvanced from './_partial-constraint-advanced.mdx'
+
+# Parent约束 {#parent-constraint}
+
+`VRCParentConstraint`组件会像目标变换是其源的子级一样，移动并旋转目标变换。
+
+![](/img/avatars/constraints/parent.png)
+
+<ConstraintMainSettings />
+
+<ConstraintActivation />
+
+## 约束设置 {#constraint-settings}
+
+<ConstraintSubSettings affectedTrs="Position/Rotation" />
+:::info
+
+使用Parent约束时，偏移量是针对每个源分别设置的。
+
+:::
+
+## 源 {#sources}
+
+<ConstraintSources />
+
+## 高级 {#advanced}
+
+<ConstraintAdvanced affectedTrs="Position/Rotation" />

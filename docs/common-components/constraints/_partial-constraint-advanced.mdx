@@ -1,0 +1,6 @@
+- **Target Transform** - 定义受此约束组件影响的变换。如果留空，则改为影响此约束所附加到的变换。
+- **Solve In Local Space** - 如果勾选，此约束将按照源处于局部空间而非世界空间来求解。
+- **Freeze To World** - 如果勾选，此约束将忽略其源，改为保持固定的 {props.affectedTrs.toLowerCase()}。
+- **Rebake Offsets When Unfrozen** - 如果勾选，此约束将在禁用 `Freeze To World` 时相对于其源重新烘焙偏移。
+
+有关这些高级设置如何工作的更深入说明，请参阅涵盖[高级约束设置](/common-components/constraints#advanced-constraint-settings)的父级章节。

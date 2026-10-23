@@ -1,0 +1,6 @@
+- **{props.affectedTrs} At Rest** - 定义当约束的整体权重为0时，变换的{props.affectedTrs.toLowerCase()}。
+- **{props.affectedTrs} Offset** - 定义应用到此约束结果上的偏移量。
+- **Lock** - 启用后，会就地锁定`At Rest`和`Offset`的值，使其无法被编辑。
+  - 如果你激活约束并让这些值保持未锁定，它们将随着目标变换的{props.affectedTrs.toLowerCase()}变化而重新计算。
+  - 如果你锁定这些值并激活约束，约束将开始接管该变换。
+- **Freeze {props.affectedTrs} Axes** - 允许你在解算约束时排除特定的轴。默认情况下，三个轴都会被选中参与解算。

@@ -1,0 +1,36 @@
+---
+sidebar_position: 2
+---
+import ConstraintMainSettings from './_partial-constraint-mainsettings.mdx'
+import ConstraintActivation from './_partial-constraint-activation.mdx'
+import ConstraintSources from './_partial-constraint-sources.mdx'
+import ConstraintAdvanced from './_partial-constraint-advanced.mdx'
+
+# Look At约束 {#look-at-constraint}
+
+`VRCLookAtConstraint`组件是简化版的[Aim约束](/common-components/constraints/vrc-aim-constraint)。它会旋转目标变换，使其正Z轴朝向源。
+
+![](/img/avatars/constraints/look-at.png)
+
+<ConstraintMainSettings />
+- **Use Up Object** - 控制是否使用单独的变换来确定滚动。
+- **Roll** - 控制围绕目标变换Z轴的角度（以度为单位），该角度用于确定其向上方向。仅在禁用`Use Up Object`时可用。
+- **World Up Object** - 设置后，约束会通过滚动来尝试使其正Y轴指向此变换。仅在启用`Use Up Object`时可用。
+
+<ConstraintActivation />
+
+## 约束设置 <!--Not partial because look-at does not expose freeze axes.--> {#constraint-settings}
+
+- **Rotation At Rest** - 定义当约束的整体权重为0时变换的旋转。
+- **Rotation Offset** - 定义应用到此约束结果上的偏移量。
+- **Lock** - 启用后，会就地锁定`At Rest`和`Offset`的值，使其无法被编辑。
+  - 如果你激活约束并让这些值保持未锁定，它们将随着目标变换的旋转变化而重新计算。
+  - 如果你锁定这些值并激活约束，约束将开始接管该变换。
+
+## 源 {#sources}
+
+<ConstraintSources />
+
+## 高级 {#advanced}
+
+<ConstraintAdvanced affectedTrs="Rotation" />
